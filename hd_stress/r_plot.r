@@ -1,0 +1,16 @@
+library(ggplot2)
+data <- read.csv("l:\\var\\hd_stress\\small_files_copy.csv")
+# data <- read.csv("l:\\var\\hd_stress\\large_file_copy.csv")
+d1 <- density(data$svc_t, bw=25)
+d2 <- ecdf(data$svc_t)
+x_min <- 0
+x_max <- max(data$svc_t)
+data$epoch_obj <- as.POSIXlt(data$epoch, origin="1970-01-01")
+
+par(mfrow=c(3,1))
+plot(data$epoch, data$svc_t, type="l")
+grid()
+plot(d1, xlim=c(x_min,x_max))
+grid()
+plot(d2, xlim=c(x_min,x_max))
+grid()
