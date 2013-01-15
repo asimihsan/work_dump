@@ -1,6 +1,7 @@
 work_dump
 =========
 
+-	**administer_boxes**: using Fabric to do sysadmin, e.g. building Python and ZeroMQ.
 -	**hd_stress**: R plot of CSV data with respect to time.
 -	**pcap\_corrupt**: Corrupting RTP then playing it into a call.
 -	**r\_plot\_time**:
